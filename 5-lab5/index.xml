@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5-Lab5(数据仓库和可视化) on AWS Big Data Day</title>
+    <link>/5-lab5.html</link>
+    <description>Recent content in 5-Lab5(数据仓库和可视化) on AWS Big Data Day</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/5-lab5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>51-构建数据仓库</title>
+      <link>/5-lab5/51-redshift.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/5-lab5/51-redshift.html</guid>
+      <description>某些没有截图或者没有特别说明的步骤，表示取默认值即可。
+ 1.查看数据  查看S3桶（此处为 s3://lab3-859236298333-sin-com/spark/output）内的EMR实验中生成的parquet格式文件是否存在。此处的 859236298333 是帐号ID（仅供参考，可能每个学员的都不太一样）。 2.创建IAM Role  选择IAM服务，点击角色-&amp;gt;创建角色，选择Redshift 选择Redshift-Customizable，点击下一步权限 选择权限AmazonS3ReadOnlyAccess 添加权限名字myRedshiftRole，点击确认 3.创建子网组  创建Redshift集群前，先创建子网组。选择Redshift服务，在左边菜单条中选择“CONFIG”-&amp;gt;”管理子网组“ 然后选择“创建集群子网组” 子网组名称可接受缺省名字“cluster-subnet-group-1“，在描述框中输入任意说明文字。选择“默认VPC”，选择“为此VPC添加所有子网“，然后点击“创建集群子网组”完成创建子网组。 4.创建Redshift集群  在左侧菜单中选择“集群”，点击“创建集群“，设置集群的名字（不要用中文，不要用特殊字符，英文开头，可以有数字，可以有减号），节点类型选择dc2.large 数据库配置接受缺省值，输入主用户密码（请记住您输入的密码） 集群权限中，选择前面创建的myRedshiftRole角色，点击“添加IAM角色” 其它配置中，选择默认VPC，缺省安全组和之前创建的集群子网组，点击确认“创建集群”，大约5分钟后，集群变为“Available”状态。 5.访问Redshift数据库  有两种方式访问Redshift数据库，一种是通过 Redshift Console上的查询编辑器，一种是通过 SQL客户端（例如SQL Workbench/J 客户端）。本实验中为了简便操作，使用Redshift Console上的查询编辑器来访问数据库。选择左边菜单中“编辑器”，在“连接到数据库”窗口中输入一下参数，然后“连接到数据库” 6.创建表  在查询编辑器中创建表，在左边Select Schema中选择“Public”，然后在SQL查询窗口中输入创建表的SQL语句：
+create table table1( tno varchar(20), tdate varchar(15), uno varchar(10), pno varchar(10), tnum int, uname varchar(20), umobile varchar(20), ano varchar(20), acity varchar(50), aname varchar(50), pclass varchar(10), pname varchar(50), price decimal(10, 2) ); 如下图所示 选择“运行”，结果应该显示”Completed”</description>
+    </item>
+    
+    <item>
+      <title>52-数据可视化</title>
+      <link>/5-lab5/52-quicksight.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/5-lab5/52-quicksight.html</guid>
+      <description>1.启用Quicksight  此处仅供未激活 Quicksight 服务的客户第一次参考使用，已经激活的客户，请选择新加坡区域即可。
+ 如果是第一次使用，需要先启用 Quicksight 服务 选择企业版并继续 选择新加坡区域，以及对应的账号名字，接受提醒的邮箱地址等 必须勾选Athena和S3支持，当选择S3支持的时候，在弹出的窗口中把对应的桶选上（此处的S3桶仅供参考，请以实际的数据为准） 2.创建数据集  进入Quicksight控制台界面，点击左侧数据集，选择创建“新数据集” 选择Redshift（自动发现）数据集，Redshift也有手动连接的方式，不过此处我们不演示 输入连接参数，选择“创建data source”，选择对应的Redshift数据库，注意配置对应的地址，端口，数据库名称，用户名和密码 选择Table1，点击“Select”,最后点击“Virtualize”完成创建数据集（此处我们选择把数据从Redshift导入到Quicksigh里面来，这样分析起来速度会快很多）
+3.数据可视化  打开可视化对象窗口，选择展现方式为“竖条状图“ 将 tdate 拖放到 X轴 栏，将 tnum 拖动到 值 栏（系统会自动选择计数） 和 这样就完成了“以日期为X轴，以当天的总销售数量为Y轴从高到低的排名”展现。
+恭喜您完成本实验所有内容！
+~完~</description>
+    </item>
+    
+  </channel>
+</rss>

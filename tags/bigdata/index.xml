@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bigdata on AWS Big Data Day</title>
+    <link>/tags/bigdata.html</link>
+    <description>Recent content in Bigdata on AWS Big Data Day</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>实验概览</title>
+      <link>/0-overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/0-overview.html</guid>
+      <description>AWS Big Data Day 上海站 - 2020.10  要完成所有的实验，大概需要 4-6 小时。所以如果时间允许，可以在Lab3或者Lab4中间挑一个作为家庭作业回去再做。
+ 我们的实验使用的区域是AWS的新加坡区域（ap-southeast-1），如果一不小心进入了别的区域，记得在控制台切换回新加坡即可。
+ 在本动手训练营中，学员将按步骤的学习如何使用 AWS 的大数据和数据湖的相关服务和组件，顺利完成大数据的收集，存储，处理，分析和可视化的完整的流程。
+   实验编号 实验内容描述 作者     Lab0 实验环境准备工作（这一步不能跳过哦） Weiqiong Chen   Lab1 实时流数据处理，基于 Kinesis 产品家族实现 Xiangquan Liu   Lab2 批量数据处理，基于 EMR(Spark) 实现 Jianqing Weng   (可选家庭作业)Lab3 数据可视化，基于 Quicksight + Athena 实现 Bob Cai   (可选家庭作业)Lab4 数据实时检索，基于 Elasticsearch 实现 Yingfeng Li   Lab5 数据仓库构建和数据可视化展现，基于 Redshift + Quicksight 实现 Guangdong Yin, Weidong Xia   Lab6 清理环境 -    为了更好的模拟实际的业务需求，我们构建了一个数据库（模拟历史数据，或者部分客户已经存在的ODS库），我们构建了实时数据流（模拟例如电商，web等的点击流），我们构建了流式实时分析和批量分析的平台以及对应的可视化展现和数据实时检索的平台。如下是此次实验的整体的架构图 为了让大家对数据结构有个更清晰的认识，我们把RDS（关系型数据库）里面的数据表结构做了一层抽象，供参考 </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redshift on AWS Big Data Day</title>
+    <link>/tags/redshift.html</link>
+    <description>Recent content in Redshift on AWS Big Data Day</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/tags/redshift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5-Lab5(数据仓库和可视化)</title>
+      <link>/5-lab5.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/5-lab5.html</guid>
+      <description>完成本节实验大概需要 30 分钟。
+ 在本练习中，您将学习如何使用Redshift和Amazon QuickSight平台构建数据可视化应用程序。您将看到如何使用Amazon的数据仓库从数据湖中装载数据，并用完全托管的数据可视化工具进行展现。
+本实验的目标包括：
+ 1、 创建Redshift集群 2、 将S3的数据文件批量装载到Redshift数据库 3、 使用Quicksight对数据表进行可视化  本实验的架构图如下
+文档和版权信息
+ 本章作者： 尹广东，夏卫东</description>
+    </item>
+    
+  </channel>
+</rss>
